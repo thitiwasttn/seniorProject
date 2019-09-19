@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<?php session_start() ?>
+<!--<html xmlns="http://w3.org/1999/xhtml">-->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<script type="text/javascript" src="jQuery_workshop/jQueryui/jquery.js">
+</script>
+<script type="text/javascript" src="jQuery_workshop/jQueryui/jquery-ui.js">
+</script>
+<script type="text/javascript">
+    $(function () {
+        $("#Tab").tabs();
+    })
+</script>
+<!--<link href = "jQuery_workshop/jQueryui/jquery-ui.css" rel="stylesheet" type="text/css" />-->
+<body>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            /*height: 100%;*/
+        }
+
+        /*            ul {
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+                        width: 25%;
+                        background-color: #f1f1f1;
+                        position: fixed;
+                        height: 100%;
+                        overflow: auto;
+
+
+                    }*/
+        .ul {
+            list-style-type: none;
+            margin: 15px;
+            background-color: #f2f2f2;
+            /*padding: 0;*/
+            width: auto;
+            /* background-color: #f1f1f1; */
+            position: fixed;
+            height: auto;
+            overflow: auto;
+            border-radius: 15px;
+            /* background-color: #f2f2f2; */
+            box-shadow: 1px 1px 50px 1px;
+            padding: 20px;
+            margin-top: 100px;
+            margin-right: 80%;
+            /*width: 30%;*/
+            /*margin-top: 20%;*/
+
+
+        }
+
+        .li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 10px;
+            margin: 2px;
+
+
+        }
+
+        form,
+        button[type=submit] {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 10px;
+            margin: 2px;
+        }
+
+        .pic {
+            display: block;
+            color: #000;
+            /*padding: 8px 16px;*/
+            width: 200px;
+            height: 200px;
+
+            /*width: auto;*/
+            /*height: auto;*/
+
+
+            /*text-decoration: none;*/
+            border-radius: 30px;
+            margin: 30px 30px 30px 30px;
+            /*margin-top: 5%;*/
+        }
+
+        li a.active {
+            background-color: #4CAF50;
+            color: white;
+            /*box-shadow: 1px 1px 50px 1px graytext ;*/
+
+
+        }
+
+        li a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+
+
+        }
+
+        .ul2 {
+            list-style-type: none;
+            margin: 0;
+            position: fixed;
+
+            /*margin-top: 0px;*/
+            padding: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 56px;
+            background-color: #333;
+        }
+
+        .ul3 {
+            list-style-type: none;
+            margin: 0;
+
+            /*margin-top: 0px;*/
+            padding: 0;
+            overflow: hidden;
+            width: 100%;
+            /*font-size: 20px;*/
+            height: 45px;
+            border-radius: 10px;
+            background-color: darkcyan;
+        }
+
+        .li2 {
+            float: left;
+        }
+
+        .li2 a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .li2 a:hover:not(.active) {
+            background-color: #111;
+        }
+
+
+        .active2 {
+            background-color: #4CAF50;
+        }
+
+        .li3 {
+            float: left;
+        }
+
+        .li3 a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .li3 a:hover:not(.active) {
+            background-color: #006868;
+        }
+
+
+        .active2 {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+
+<?php
+
+
+require('lineloginlibery.php');
+require('lineDB.php');
+$LineLogin = new LineLoginLib();
+$lineDb = new LineDB();
+if (is_null($_SESSION["email"])) {
+    header("Location: login.php");
+}
+if ($lineDb->checkFirstTime($_SESSION['email']) == 1) {
+    header("Location: firsttimelinetoken.php");
+}
+//header("Location: http://localhost/project/linehome.php?profile");
+
+
+if (isset($_GET['logout'])) {
+
+    $LineLogin->logout();
+}
+
+
+?>
+
+<body>
+
+
+<font size="5">
+    <ul class="ul">
+        <li class="li"><a href="profile.php">Profile</a></li>
+        <li class="li"><a class="active" href="">Massage manage</a></li>
+        <li class="li"><a href="broadcast.php">Broadcast</a></li>
+        <li class="li"><a href="">Information</a></li>
+        <li class="li"><a href="?logout">log out</a></li>
+
+        <li class="li">
+            <div align="center"><img src="<?php echo $LineLogin->getpic(); ?>" class="pic"></div>
+        </li>
+    </ul>
+</font>
+
+<font size="5">
+    <ul class="ul2">
+        <li class="li2"><a class="active2" href="#home"><?php echo $LineLogin->getName(); ?></a></li>
+        <li class="li2"><a href="#news">News2</a></li>
+        <li class="li2"><a href="#contact">Contact2</a></li>
+        <li class="li2"><a href="#about">About2</a></li>
+    </ul>
+
+</font>
+
+
+<div style="margin-left:364px;padding:1px 16px;height: auto;">
+    <div style="margin-top: 70px;">
+
+
+        <h1 align="center">massage manager</h1>
+        <hr>
+        <div id="Tab">
+            <ul class="ul3">
+
+                <li class ="li3"><a class="active" href="">ตั้งเวลา</a> </li>
+                <li class ="li3"><a href="#tab2">ส่งแล้ว</a> </li>
+                <li class ="li3"><a href="#tab3">ส่งผิดพลาด</a> </li>
+
+            </ul>
+            <div style="margin-top: 15px">
+                <div id="tab1">
+                    <p>11111111</p>
+
+                </div>
+                <div id="tab2">
+                    <p>22222222222</p>
+
+                </div>
+                <div id="tab3">
+                    <p>3333333333</p>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,436 @@
+.ml-auto {
+    left: auto !important;
+    right: 0px;
+}
+
+.mr-auto {
+    right: auto !important;
+    left: 0px;
+}
+.my-headfont
+{
+    font-family: Georgia;
+}
+.boxandshadow {
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 1px 1px 50px 1px;
+    /*padding: 10px;*/
+    /*margin-left: 2px;*/
+}
+
+/*.box {*/
+/*    !*border-radius: 0px 0px 10px 10px;*!*/
+/*    padding: 87px;*/
+/*    !*text-shadow: 50px 0px 7px ;*!*/
+
+/*}*/
+
+.my-table {
+    width: 100%;
+
+}
+
+.my-icon
+{
+    width: 20px;
+}
+
+input[type=search]
+{
+    border-radius: 7px;
+}
+
+
+@media (min-width: 1000px) {
+    .my-dt
+    {
+        /*margin-bottom: 5px;*/
+        /*margin-top: 5px;*/
+        /*!*padding: 100px;*!*/
+    }
+    .mytab {
+        border-radius: 15px;
+        background-color: #f2f2f2;
+        /*box-shadow: 1px 1px 50px 1px;*/
+        padding: 5px;
+        margin: 25px;
+        overflow: auto;
+        /*text-align: center;*/
+        /*width: 99.55%;*/
+        /*width: 100%;*/
+    }
+    .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        border-radius: 15px;
+
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+        background-color: #4CAF50;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        -webkit-animation: fadeEffect 1s;
+        animation: fadeEffect 1s;
+        width: auto;
+        /* width: 100px; */
+    }
+
+    /* Fade in tabs */
+    @-webkit-keyframes fadeEffect {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeEffect {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    /*table {*/
+    /*    font-family: arial, sans-serif;*/
+    /*    border-collapse: collapse;*/
+    /*    width: 100%;*/
+    /*    !*border-radius: 15px;*!*/
+    /*}*/
+
+    /*td, th {*/
+    /*    border: 1px solid #dddddd;*/
+    /*    text-align: left;*/
+
+    /*    padding: 8px;*/
+
+    /*    !*border-radius: 15px;*!*/
+
+    /*}*/
+    .ellipsis {
+        padding: 3px;
+        max-width: 400px;
+        /*max-lines: 1;*/
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        /*max-height: 200px;*/
+
+    }
+    .my-textline
+    {
+        height: 3em;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+
+    }
+    .my-form {
+        padding: 5px;
+        margin-bottom: 10px;
+        text-align: right;
+    }
+
+    .box {
+        /*display: none;*/
+        /*border-radius: 0px 0px 10px 10px;*/
+        padding: 87px;
+    }
+
+    .my-table{
+        width: auto;
+        padding: 2px;
+
+
+    }
+
+    .mybox {
+        border-radius: 10px 10px 10px 10px;
+        box-shadow: 1px 1px 25px 1px;
+        padding: 20px;
+        margin-top: 15px;
+        width: 95%;
+        background-color: white;
+    }
+
+    .myboxrow2 {
+        border-radius: 10px 10px 10px 10px;
+        box-shadow: 1px 1px 25px 1px;
+        padding: 20px;
+        margin-top: 50px;
+        width: 95%;
+        background-color: white;
+    }
+
+    .my-butedit {
+        width: 30%;
+        margin-top: 25px;
+    }
+
+    .my-butpass {
+        width: 50%;
+        margin-top: 25px;
+    }
+
+    .my-text {
+        text-align: right;
+    }
+
+    .my-data {
+        text-align: left;
+    }
+    body
+    {
+        margin-bottom: 30px;
+        background-color: #F2F2F2;
+        font-family: Georgia;
+    }
+    .my-pic
+    {
+        border-radius: 15px;
+        max-height: 200px;
+        height: auto;
+        max-width: 400px;
+        width: auto;
+
+    }
+    .my-picc
+    {
+        border-radius: 10px;
+        width: auto;
+        max-width: 500px;
+        height: auto;
+        max-height: 500px;
+
+    }
+    .my-row2{
+        margin-top: 5px;
+    }
+    .my-half
+    {
+        width: 50%;
+    }
+    .x1 {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        box-shadow: 1px 1px 50px 1px;
+        padding: 20px;
+        width: 50%;
+        margin-top: 20%
+    }
+
+
+}
+
+@media (max-width: 1000px) {
+    .my-picc
+    {
+        width: auto;
+        max-width: 200px;
+        border-radius: 10px;
+        height: auto;
+        max-height: 400px;
+
+    }
+    .x1 {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        box-shadow: 1px 1px 50px 1px;
+        padding: 20px;
+        width: 95%;
+
+        margin-top: 50%
+    }
+    .my-textline
+    {
+        height: 3em;
+    }
+    .mytab {
+        border-radius: 15px;
+        background-color: #f2f2f2;
+        /*box-shadow: 1px 1px 50px 1px;*/
+        padding: 5px;
+        /*margin: 25px;*/
+        overflow: auto;
+        /*text-align: center;*/
+        /*width: 99.55%;*/
+        /*width: 100%;*/
+    }
+
+    .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        border-radius: 15px;
+
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        -webkit-animation: fadeEffect 1s;
+        animation: fadeEffect 1s;
+        width: 100%;
+        /* width: 100px; */
+    }
+
+    /* Fade in tabs */
+    @-webkit-keyframes fadeEffect {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeEffect {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    /*table {*/
+    /*    font-family: arial, sans-serif;*/
+    /*    border-collapse: collapse;*/
+    /*    !*width: 100%;*!*/
+    /*    !*border-radius: 15px;*!*/
+    /*}*/
+
+    /*td, th {*/
+    /*    border: 1px solid #dddddd;*/
+    /*    text-align: left;*/
+
+    /*    padding: 8px;*/
+
+    /*    !*border-radius: 15px;*!*/
+
+    /*}*/
+    .ellipsis {
+        max-width: 130px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .my-pic
+    {
+        border-radius: 15px;
+        height: 100px;
+        width: 100px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+
+    }
+    .box {
+        /*display: none;*/
+        /*border-radius: 0px 0px 10px 10px;*/
+        padding: 40px;
+    }
+    body{
+        margin-bottom: 30px;
+        background-color: #F2F2F2;
+    }
+
+    .mybox, .myboxrow2 {
+        border-radius: 10px 10px 10px 10px;
+        box-shadow: 1px 1px 25px 1px;
+        padding: 20px;
+        margin-top: 15px;
+        background-color: white;
+        width: 90%;
+    }
+    .massagemanager
+    {
+        width: 100%;
+    }
+
+    .my-butedit {
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    .my-form {
+        /*padding: 5px;*/
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    .my-dt
+    {
+        margin-bottom: 5px;
+        margin-top: 5px;
+        /*padding: 100px;*/
+    }
+
+    .my-table {
+        width: 100%;
+
+
+    }
+    .row2 ,.my-row2{
+        margin-top: 5px;
+    }
+
+
+}
+
+.my-but {
+    width: 100%;
+    margin-top: 15px;
+}
