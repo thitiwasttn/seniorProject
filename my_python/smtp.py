@@ -6,8 +6,8 @@ import sys
 
 
 def send(newpassword, receiver):
-    sender = 'peeghost@hotmail.com'
-    pwd = '051635297'
+    sender = 'thi.nuptester'
+    pwd = 'Thitiwas12345'
     receiver = str(receiver)
     message = """\
 Subject: Your new password
