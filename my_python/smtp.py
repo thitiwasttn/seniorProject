@@ -6,7 +6,7 @@ import sys
 
 
 def send(newpassword, receiver):
-    sender = 'thi.nuptester'
+    sender = 'thi.nuptester@outlook.com'
     pwd = 'Thitiwas12345'
     receiver = str(receiver)
     message = """\
